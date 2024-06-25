@@ -50,8 +50,8 @@ augmented_real_time_financial_analysis/
 
 1. **Clone the repository and navigate to the project directory:**
     ```sh
-    git clone <repository-url>
-    cd augmented_real_time_financial_analysis
+    git clone [<repository-url>](https://github.com/Rohanr14/finanlysis/)
+    cd finalysis
     ```
 
 2. **Create a build directory and navigate to it:**
@@ -72,7 +72,7 @@ augmented_real_time_financial_analysis/
 
 5. **Run the executable:**
     ```sh
-    ./RealTimeFinancialAnalysis
+    ./Finalysis
     ```
 
 ## Configuration
