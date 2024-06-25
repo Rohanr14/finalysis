@@ -50,7 +50,7 @@ finalysis/
 
 1. **Clone the repository and navigate to the project directory:**
     ```sh
-    git clone https://github.com/Rohanr14/finanlysis/
+    git clone https://github.com/Rohanr14/finalysis/
     cd finalysis
     ```
 
