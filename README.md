@@ -14,7 +14,7 @@ This project aims to provide a comprehensive real-time financial data analysis t
 
 ## Project Structure
 ```
-augmented_real_time_financial_analysis/
+finalysis/
 ├── CMakeLists.txt
 ├── src/
 │ ├── main.cpp
@@ -50,7 +50,7 @@ augmented_real_time_financial_analysis/
 
 1. **Clone the repository and navigate to the project directory:**
     ```sh
-    git clone [<repository-url>](https://github.com/Rohanr14/finanlysis/)
+    git clone https://github.com/Rohanr14/finanlysis/
     cd finalysis
     ```
 
