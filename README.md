@@ -77,25 +77,14 @@ finalysis/
 
 ## Configuration
 
-Update the `main.cpp` file with your API keys:
+Update the `main.cpp` file with your API keys (it is recommended you store them in your env variables):
 ```cpp
 int main() {
-    std::string apiKey = "YOUR_API_KEY";
-    std::string symbol = "AAPL";
-    std::string marketData = fetchData(apiKey, symbol);
-    std::string sentimentData = fetchData("YOUR_SENTIMENT_API_KEY", "AAPL_SENTIMENT");
-
-    auto processedMarketData = processData(marketData);
-    auto sentimentScores = analyzeSentiment(sentimentData);
-    
-    auto trends = analyzeTrends(processedMarketData);
-    auto risk = assessRisk(processedMarketData, sentimentScores);
-    
-    std::cout << "Real-time Risk Score: " << risk << std::endl;
-
-    visualizeData(trends);
-
-    return 0;
+    const char* alphaVantageApiKey = getenv("ALPHA_VANTAGE_API_KEY");
+    const char* twitterApiKey = getenv("TWITTER_API_KEY");
+    const char* twitterApiSecretKey = getenv("TWITTER_API_SECRET_KEY");
+    string symbol = "AAPL";
+...
 }
 ```
 
