@@ -110,10 +110,6 @@ Alpha Vantage
 Dlib
 libcurl
 JSON for Modern C++
-Contact
-For any questions or feedback, please contact Rohanr14 at [glitch.berths0n@icloud.com].
 
-
-Replace placeholders like `<repository-url>`, `YOUR_API_KEY`, `YOUR_SENTIMENT_API_KEY`, `[Your Name]`, and `[Your Email]` with the appropriate information. This `README.md` file provides clear instructions for setting up and running the project, making it easy for others to understand and contribute.
-
-Happy coding!
+## Contact
+For any questions or feedback, please contact [glitch.berths0n@icloud.com].
