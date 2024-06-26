@@ -50,7 +50,7 @@ augmented_real_time_financial_analysis/
 
 1. **Clone the repository and navigate to the project directory:**
     ```sh
-    git clone [<repository-url>](https://github.com/Rohanr14/finanlysis/)
+    git clone [<repository-url>](https://github.com/Rohanr14/finalysis/)
     cd finalysis
     ```
 
