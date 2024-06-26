@@ -10,18 +10,11 @@
 
 int main() {
     const char* alphaVantageApiKey = getenv("ALPHA_VANTAGE_API_KEY");
-    const char* twitterApiKey = getenv("TWITTER_API_KEY");
-    const char* twitterApiSecretKey = getenv("TWITTER_API_SECRET_KEY");
+    const char* bearerToken = getenv("TWITTER_BEARER_TOKEN");
 
     // Ensure the environment variables are set
-    if (!alphaVantageApiKey || !twitterApiKey || !twitterApiSecretKey) {
+    if (!alphaVantageApiKey || !bearerToken) {
         cerr << "Error: Missing API keys in environment variables." << endl;
-        return 1;
-    }
-
-    string bearerToken = getBearerToken(twitterApiKey, twitterApiSecretKey);
-    if (bearerToken.empty()) {
-        cerr << "Error: Failed to obtain bearer token." << endl;
         return 1;
     }
 
