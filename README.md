@@ -2,15 +2,16 @@
 
 ## Overview
 
-This project aims to provide a comprehensive real-time financial data analysis tool that not only processes market data but also incorporates sentiment analysis from social media and news feeds, advanced prediction models, interactive visualizations, and real-time risk assessment. The tool leverages parallel computing for high-performance processing and offers unique insights by combining traditional financial data with alternative data sources.
+Finalysis is a comprehensive real-time financial data analysis tool that incorporates sentiment analysis from social media and news feeds, advanced prediction models, interactive visualizations, and real-time risk assessment. It leverages parallel computing for high-performance processing and provides unique insights by combining traditional financial data with alternative data sources.
 
 ## Key Features
+
 1. **Real-time Market Data Fetching**: Uses APIs like Alpha Vantage to fetch market data.
-2. **Sentiment Analysis Integration**: Analyzes sentiment from social media platforms to gauge market sentiment.
-3. **Advanced Prediction Models**: Implements advanced models for more accurate market predictions.
-4. **Interactive Visualizations**: Provides dynamic and interactive visualizations using web technologies.
-5. **Real-time Risk Assessment**: Provides real-time risk metrics and alerts based on market data and sentiment analysis.
-6. **User Customization**: Allows users to customize their analysis parameters and uses AI to provide personalized insights.
+2. **Sentiment Analysis Integration**: Analyzes sentiment from social media platforms.
+3. **Advanced Prediction Models**: Implements models for accurate market predictions.
+4. **Interactive Visualizations**: Provides dynamic visualizations using web technologies.
+5. **Real-time Risk Assessment**: Offers real-time risk metrics and alerts.
+6. **User Customization**: Allows users to customize analysis parameters and provides personalized insights.
 
 ## Project Structure
 ```
@@ -18,6 +19,8 @@ finalysis/
 ├── CMakeLists.txt
 ├── src/
 │ ├── main.cpp
+| ├── base64.cpp
+| ├── base64.h
 │ ├── data_fetcher.cpp
 │ ├── data_fetcher.h
 │ ├── data_processor.cpp
@@ -30,13 +33,17 @@ finalysis/
 │ ├── risk_assessor.h
 │ └── visualizer.cpp
 │ └── visualizer.h
-└── include/
-├── json/
-│ └── json.h (header-only JSON library)
-└── dlib/
-└── dlib headers (if using dlib for machine learning)
-└── curl/
-└── curl headers
+├── include/
+│ ├── json/
+│     └── json.hpp
+├── web/
+│   ├── index.html
+│   ├── script.js
+│   ├── style.css
+│   ├── particles.min.js
+│   ├── particles.json
+│   └── dollar_sign.png
+└── README.md
 ```
 
 ## Prerequisites
@@ -53,9 +60,14 @@ finalysis/
     git clone https://github.com/Rohanr14/finalysis/
     cd finalysis
     ```
+2. **Clone Matplotplusplus into /include directory:**
+   ```sh
+   git clone https://github.com/alandefreitas/matplotplusplus.git include/matplotplusplus
+   ```
 
-2. **Create a build directory and navigate to it:**
+2. **Create a build directory from scratch and navigate to it:**
     ```sh
+    rm -rf build
     mkdir build
     cd build
     ```
@@ -80,11 +92,23 @@ finalysis/
 Update the `main.cpp` file with your API keys (it is recommended you store them in your env variables):
 ```cpp
 int main() {
-    const char* alphaVantageApiKey = getenv("ALPHA_VANTAGE_API_KEY");
-    const char* twitterApiKey = getenv("TWITTER_API_KEY");
-    const char* twitterApiSecretKey = getenv("TWITTER_API_SECRET_KEY");
-    string symbol = "AAPL";
-...
+    ...
+        // Fetch and process financial data
+        string marketData = fetchData(alphaVantageApiKey, symbol);
+        auto processedMarketData = processData(marketData);
+
+        vector<double> sentimentScores;
+
+        // If applySentiment is true, fetch and process sentiment data
+        if (applySentiment) {
+            cout << "Fetching sentiment data..." << endl;
+            const char* bearerToken = getenv("TWITTER_BEARER_TOKEN");
+            string sentimentData = fetchTwitterData(bearerToken, symbol);
+            sentimentScores = analyzeSentiment(sentimentData);
+        } else {
+            cout << "Skipping sentiment analysis..." << endl;
+        }
+    ...
 }
 ```
 
