@@ -4,7 +4,7 @@
 # compile CXX with /opt/homebrew/opt/llvm/bin/clang++
 CXX_DEFINES = -D_USE_MATH_DEFINES
 
-CXX_INCLUDES = -I/Users/rohan/VSCode/finalysis/include -I/Users/rohan/VSCode/finalysis/include/json -I/Users/rohan/VSCode/finalysis/include/dlib -I/Users/rohan/VSCode/finalysis/include/matplotplusplus -I/Users/rohan/VSCode/finalysis/include/matplotplusplus/source/3rd_party/nodesoup/include
+CXX_INCLUDES = -I/Users/rohan/VSCode/finalysis/include -I/Users/rohan/VSCode/finalysis/include/json -I/Users/rohan/VSCode/finalysis/include/dlib -I/Users/rohan/VSCode/finalysis/include/matplotplusplus -I/Users/rohan/VSCode/finalysis/include/cpp-httplib -I/Users/rohan/VSCode/finalysis/include/matplotplusplus/source/3rd_party/nodesoup/include
 
 CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fvisibility=hidden
 

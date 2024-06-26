@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="content">
+        <h1>Financial Analysis</h1>
+        <h2>Analyze Stock Data</h2>
+        <form id="analyze-form">
+            <label for="symbol">Stock Symbol:</label>
+            <input type="text" id="symbol" name="symbol" required>
+            <div>
+                <input type="checkbox" id="sentiment-toggle" name="sentiment-toggle" checked>
+                <label for="sentiment-toggle">Apply Sentiment Analysis (Coming Soon)</label>
+            </div>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="result">
+            <h2>Analysis Result</h2>
+            <p id="risk-score"></p>
+            <img id="plot" src="" alt="Plot">
+        </div>
+    </div>
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

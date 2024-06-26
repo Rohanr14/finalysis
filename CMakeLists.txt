@@ -4,7 +4,7 @@ project(Finalysis)
 set(CMAKE_CXX_STANDARD 17)
 
 # Add include directories
-include_directories(include include/json include/dlib include/matplotplusplus)
+include_directories(include include/json include/dlib include/matplotplusplus include/cpp-httplib)
 
 # Add executable
 add_executable(Finalysis

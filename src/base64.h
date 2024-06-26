@@ -5,6 +5,6 @@
 
 using namespace std;
 
-string base64_encode(const string &in);
+string base64_encode(const unsigned char* input, size_t length);
 
 #endif // BASE64_H
