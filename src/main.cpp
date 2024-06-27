@@ -8,7 +8,6 @@
 #include "risk_assessor.h"
 #include "visualizer.h"
 #include "twitter_data.h"
-#include "base64.h"
 #include "httplib.h"
 #include "json.hpp"
 #include <vector>
@@ -26,12 +25,6 @@ string read_file(const string &path) {
     stringstream buffer;
     buffer << file.rdbuf();
     return buffer.str();
-}
-
-string encode_base64(const string &filename) {
-    ifstream file(filename, ios::binary);
-    vector<unsigned char> buffer(istreambuf_iterator<char>(file), {});
-    return "data:image/png;base64," + base64_encode(reinterpret_cast<const unsigned char*>(buffer.data()), buffer.size());
 }
 
 int main() {
@@ -89,17 +82,10 @@ int main() {
         auto trends = analyzeTrends(processedMarketData);
         auto risk = assessRisk(processedMarketData, sentimentScores);
 
-        // Create plot and save to file
-        visualizeData(trends);
-
-        // Encode the plot image file as a base64 string
-        string base64_plot = encode_base64("plot.png");
-        cout << "Base64 plot: " << base64_plot.substr(0, 50) << "..." << endl; // Debugging
-
         // Create response JSON
         json response;
         response["risk"] = risk;
-        response["plot"] = base64_plot;
+        response["data"] = processedMarketData;
 
         res.set_content(response.dump(), "application/json");
     });

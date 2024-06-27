@@ -13,9 +13,25 @@ document.getElementById('analyze-form').addEventListener('submit', function (eve
         .then(response => response.json())
         .then(data => {
             document.getElementById('risk-score').innerText = `Risk Score: ${data.risk}`;
-            const plotImg = document.getElementById('plot');
-            plotImg.src = data.plot; // Directly assign the base64 string to the src attribute
-            plotImg.style.display = 'block'; // Ensure the image is displayed
+            const plotData = data.data.map((y, i) => ({ x: i, y }));
+
+            const trace = {
+                x: plotData.map(p => p.x),
+                y: plotData.map(p => p.y),
+                type: 'scatter'
+            };
+
+            const layout = {
+                title: 'Stock Price Over Time',
+                xaxis: {
+                    title: 'Time'
+                },
+                yaxis: {
+                    title: 'Stock Price'
+                }
+            };
+
+            Plotly.newPlot('plot', [trace], layout);
         })
         .catch((error) => {
             console.error('Error:', error);
