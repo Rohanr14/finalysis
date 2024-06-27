@@ -181,33 +181,19 @@ CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.s"
 	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohan/VSCode/finalysis/src/risk_assessor.cpp -o CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.s
 
-CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o: CMakeFiles/Finalysis.dir/flags.make
-CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o: /Users/rohan/VSCode/finalysis/src/twitter_data.cpp
-CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o: CMakeFiles/Finalysis.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o -MF CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o.d -o CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o -c /Users/rohan/VSCode/finalysis/src/twitter_data.cpp
+CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o: CMakeFiles/Finalysis.dir/flags.make
+CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o: /Users/rohan/VSCode/finalysis/src/aylien_data.cpp
+CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o: CMakeFiles/Finalysis.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o"
+	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o -MF CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o.d -o CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o -c /Users/rohan/VSCode/finalysis/src/aylien_data.cpp
 
-CMakeFiles/Finalysis.dir/src/twitter_data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Finalysis.dir/src/twitter_data.cpp.i"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rohan/VSCode/finalysis/src/twitter_data.cpp > CMakeFiles/Finalysis.dir/src/twitter_data.cpp.i
+CMakeFiles/Finalysis.dir/src/aylien_data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Finalysis.dir/src/aylien_data.cpp.i"
+	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rohan/VSCode/finalysis/src/aylien_data.cpp > CMakeFiles/Finalysis.dir/src/aylien_data.cpp.i
 
-CMakeFiles/Finalysis.dir/src/twitter_data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Finalysis.dir/src/twitter_data.cpp.s"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohan/VSCode/finalysis/src/twitter_data.cpp -o CMakeFiles/Finalysis.dir/src/twitter_data.cpp.s
-
-CMakeFiles/Finalysis.dir/src/visualizer.cpp.o: CMakeFiles/Finalysis.dir/flags.make
-CMakeFiles/Finalysis.dir/src/visualizer.cpp.o: /Users/rohan/VSCode/finalysis/src/visualizer.cpp
-CMakeFiles/Finalysis.dir/src/visualizer.cpp.o: CMakeFiles/Finalysis.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Finalysis.dir/src/visualizer.cpp.o"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Finalysis.dir/src/visualizer.cpp.o -MF CMakeFiles/Finalysis.dir/src/visualizer.cpp.o.d -o CMakeFiles/Finalysis.dir/src/visualizer.cpp.o -c /Users/rohan/VSCode/finalysis/src/visualizer.cpp
-
-CMakeFiles/Finalysis.dir/src/visualizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Finalysis.dir/src/visualizer.cpp.i"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rohan/VSCode/finalysis/src/visualizer.cpp > CMakeFiles/Finalysis.dir/src/visualizer.cpp.i
-
-CMakeFiles/Finalysis.dir/src/visualizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Finalysis.dir/src/visualizer.cpp.s"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohan/VSCode/finalysis/src/visualizer.cpp -o CMakeFiles/Finalysis.dir/src/visualizer.cpp.s
+CMakeFiles/Finalysis.dir/src/aylien_data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Finalysis.dir/src/aylien_data.cpp.s"
+	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohan/VSCode/finalysis/src/aylien_data.cpp -o CMakeFiles/Finalysis.dir/src/aylien_data.cpp.s
 
 # Object files for target Finalysis
 Finalysis_OBJECTS = \
@@ -219,8 +205,7 @@ Finalysis_OBJECTS = \
 "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o" \
 "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o" \
 "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o" \
-"CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o" \
-"CMakeFiles/Finalysis.dir/src/visualizer.cpp.o"
+"CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o"
 
 # External object files for target Finalysis
 Finalysis_EXTERNAL_OBJECTS =
@@ -233,32 +218,14 @@ Finalysis: CMakeFiles/Finalysis.dir/src/data_processor.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o
-Finalysis: CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o
-Finalysis: CMakeFiles/Finalysis.dir/src/visualizer.cpp.o
+Finalysis: CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/build.make
 Finalysis: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libcurl.tbd
 Finalysis: /opt/homebrew/lib/libdlib.19.24.4.dylib
-Finalysis: include/matplotplusplus/source/matplot/libmatplot.a
 Finalysis: /opt/homebrew/opt/llvm/lib/libomp.dylib
 Finalysis: /opt/homebrew/opt/openblas/lib/libopenblas.dylib
-Finalysis: /opt/homebrew/lib/libjpeg.dylib
-Finalysis: /opt/homebrew/lib/libtiff.dylib
-Finalysis: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libz.tbd
-Finalysis: /opt/homebrew/lib/libpng.dylib
-Finalysis: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libz.tbd
-Finalysis: /opt/homebrew/lib/libpng.dylib
-Finalysis: /opt/homebrew/lib/libfftw3.dylib
-Finalysis: /opt/homebrew/lib/libfftw3f.dylib
-Finalysis: /opt/homebrew/lib/libfftw3l.dylib
-Finalysis: /opt/homebrew/lib/libfftw3_threads.dylib
-Finalysis: /opt/homebrew/lib/libfftw3f_threads.dylib
-Finalysis: /opt/homebrew/lib/libfftw3l_threads.dylib
-Finalysis: /opt/homebrew/lib/libfftw3_omp.dylib
-Finalysis: /opt/homebrew/lib/libfftw3f_omp.dylib
-Finalysis: /opt/homebrew/lib/libfftw3l_omp.dylib
-Finalysis: include/matplotplusplus/source/3rd_party/libnodesoup.a
 Finalysis: CMakeFiles/Finalysis.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Finalysis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Finalysis"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Finalysis.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

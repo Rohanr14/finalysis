@@ -3,8 +3,11 @@ project(Finalysis)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
+
 # Add include directories
-include_directories(include include/json include/dlib include/matplotplusplus include/cpp-httplib)
+include_directories(include include/json include/dlib include/cpprest include/cpp-httplib)
 
 # Add executable
 add_executable(Finalysis
@@ -23,10 +26,9 @@ add_executable(Finalysis
     src/trend_analyzer.h
     src/risk_assessor.cpp
     src/risk_assessor.h
-    src/twitter_data.cpp
-    src/twitter_data.h
-    src/visualizer.cpp
-    src/visualizer.h
+    src/aylien_data.cpp
+    src/aylien_data.h
+    src/httplib.h
 )
 
 # Set OpenMP flags
@@ -49,7 +51,3 @@ target_link_libraries(Finalysis CURL::libcurl)
 # Find and link Dlib
 find_package(dlib REQUIRED)
 target_link_libraries(Finalysis dlib::dlib)
-
-# Link Matplot++
-add_subdirectory(include/matplotplusplus)
-target_link_libraries(Finalysis matplot)

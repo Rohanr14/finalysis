@@ -83,6 +83,28 @@ BLAS_sgemm_LIBRARY:FILEPATH=BLAS_sgemm_LIBRARY-NOTFOUND
 //Path to a library.
 BLAS_sunperf_LIBRARY:FILEPATH=BLAS_sunperf_LIBRARY-NOTFOUND
 
+Boost_ATOMIC_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_atomic-mt.dylib
+
+Boost_CHRONO_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_chrono-mt.dylib
+
+Boost_DATE_TIME_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_date_time-mt.dylib
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/opt/homebrew/lib/cmake/Boost-1.85.0
+
+Boost_FILESYSTEM_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_filesystem-mt.dylib
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/opt/homebrew/include
+
+Boost_RANDOM_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_random-mt.dylib
+
+Boost_REGEX_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_regex-mt.dylib
+
+Boost_SYSTEM_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_system-mt.dylib
+
+Boost_THREAD_LIBRARY_RELEASE:STRING=/opt/homebrew/lib/libboost_thread-mt.dylib
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/opt/homebrew/opt/llvm/bin/llvm-addr2line
 
@@ -374,6 +396,9 @@ CURL_LIBRARY_DEBUG:FILEPATH=CURL_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 CURL_LIBRARY_RELEASE:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libcurl.tbd
 
+//The directory containing a CMake configuration file for CppHTTPLib.
+CppHTTPLib_DIR:PATH=CppHTTPLib_DIR-NOTFOUND
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/Users/rohan/VSCode/finalysis/build/_deps
 
@@ -492,6 +517,15 @@ Matplot++_SOURCE_DIR:STATIC=/Users/rohan/VSCode/finalysis/include/matplotplusplu
 
 OPENCV_FOUND:BOOL=FALSE
 
+//Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/opt/homebrew/lib/libcrypto.dylib
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=/opt/homebrew/include
+
+//Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=/opt/homebrew/lib/libssl.dylib
+
 OpenCV_CONFIG_PATH:FILEPATH=/Users/rohan/VSCode/finalysis/include/matplotplusplus/cmake
 
 OpenCV_FOUND:BOOL=FALSE
@@ -531,6 +565,39 @@ ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
 ZLIB_LIBRARY_RELEASE:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libz.tbd
+
+//The directory containing a CMake configuration file for boost_atomic.
+boost_atomic_DIR:PATH=/opt/homebrew/lib/cmake/boost_atomic-1.85.0
+
+//The directory containing a CMake configuration file for boost_chrono.
+boost_chrono_DIR:PATH=/opt/homebrew/lib/cmake/boost_chrono-1.85.0
+
+//The directory containing a CMake configuration file for boost_date_time.
+boost_date_time_DIR:PATH=/opt/homebrew/lib/cmake/boost_date_time-1.85.0
+
+//The directory containing a CMake configuration file for boost_filesystem.
+boost_filesystem_DIR:PATH=/opt/homebrew/lib/cmake/boost_filesystem-1.85.0
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/opt/homebrew/lib/cmake/boost_headers-1.85.0
+
+//The directory containing a CMake configuration file for boost_random.
+boost_random_DIR:PATH=/opt/homebrew/lib/cmake/boost_random-1.85.0
+
+//The directory containing a CMake configuration file for boost_regex.
+boost_regex_DIR:PATH=/opt/homebrew/lib/cmake/boost_regex-1.85.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/opt/homebrew/lib/cmake/boost_system-1.85.0
+
+//The directory containing a CMake configuration file for boost_thread.
+boost_thread_DIR:PATH=/opt/homebrew/lib/cmake/boost_thread-1.85.0
+
+//The directory containing a CMake configuration file for cpprest.
+cpprest_DIR:PATH=cpprest_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for cpprestsdk.
+cpprestsdk_DIR:PATH=/opt/homebrew/lib/cmake/cpprestsdk
 
 //The directory containing a CMake configuration file for dlib.
 dlib_DIR:PATH=/opt/homebrew/lib/cmake/dlib
@@ -590,6 +657,8 @@ BLAS_scs_LIBRARY-ADVANCED:INTERNAL=1
 BLAS_sgemm_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BLAS_sunperf_LIBRARY
 BLAS_sunperf_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -730,7 +799,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -813,6 +882,8 @@ FFTW_LONGDOUBLE_OPENMP_LIB-ADVANCED:INTERNAL=1
 FFTW_LONGDOUBLE_THREADS_LIB-ADVANCED:INTERNAL=1
 //Details about finding BLAS
 FIND_PACKAGE_MESSAGE_DETAILS_BLAS:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/System/Library/Frameworks/Accelerate.framework][v()]
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/opt/homebrew/lib/cmake/Boost-1.85.0/BoostConfig.cmake][cfound components: random system thread filesystem chrono atomic date_time regex ][v1.85.0()]
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libcurl.tbd][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include][c ][v8.6.0()]
 //Details about finding FFTW
@@ -827,6 +898,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v5.1()]
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-Xpreprocessor -fopenmp][/opt/homebrew/opt/llvm/lib/libomp.dylib][v5.1()]
 //Details about finding OpenMP_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-Xpreprocessor -fopenmp][/opt/homebrew/opt/llvm/lib/libomp.dylib][v5.1()]
+//Details about finding OpenSSL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/opt/homebrew/lib/libcrypto.dylib][/opt/homebrew/include][c ][v3.3.1()]
 //Details about finding PNG
 FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/opt/homebrew/lib/libpng.dylib][/opt/homebrew/include][v1.6.43()]
 //Details about finding TIFF
@@ -845,6 +918,12 @@ JPEG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 JPEG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Have function cheev_
 LAPACK_WORKS:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
+OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
+OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 //CXX compiler's OpenMP specification date
 OpenMP_CXX_SPEC_DATE:INTERNAL=202011
 //C compiler's OpenMP specification date
@@ -877,4 +956,44 @@ ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+_OPENSSL_CFLAGS:INTERNAL=
+_OPENSSL_CFLAGS_I:INTERNAL=
+_OPENSSL_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_FOUND:INTERNAL=
+_OPENSSL_INCLUDEDIR:INTERNAL=
+_OPENSSL_LIBDIR:INTERNAL=
+_OPENSSL_LIBS:INTERNAL=
+_OPENSSL_LIBS_L:INTERNAL=
+_OPENSSL_LIBS_OTHER:INTERNAL=
+_OPENSSL_LIBS_PATHS:INTERNAL=
+_OPENSSL_MODULE_NAME:INTERNAL=
+_OPENSSL_PREFIX:INTERNAL=
+_OPENSSL_STATIC_CFLAGS:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_I:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBDIR:INTERNAL=
+_OPENSSL_STATIC_LIBS:INTERNAL=
+_OPENSSL_STATIC_LIBS_L:INTERNAL=
+_OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
+_OPENSSL_VERSION:INTERNAL=
+__pkg_config_checked__OPENSSL:INTERNAL=1
+//ADVANCED property for variable: boost_atomic_DIR
+boost_atomic_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_chrono_DIR
+boost_chrono_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_date_time_DIR
+boost_date_time_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_filesystem_DIR
+boost_filesystem_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_random_DIR
+boost_random_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_regex_DIR
+boost_regex_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_thread_DIR
+boost_thread_DIR-ADVANCED:INTERNAL=1
 

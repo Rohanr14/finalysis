@@ -1,18 +1,27 @@
 #include "sentiment_analyzer.h"
 #include "json.hpp"
-#include <sstream>
 
 using json = nlohmann::json;
 using namespace std;
 
-vector<double> analyzeSentiment(const string& data) {
-    auto jsonObj = json::parse(data);
-
+vector<double> analyzeSentiment(const string &sentimentData) {
     vector<double> sentimentScores;
-    const auto& posts = jsonObj["posts"];
-    for (const auto& post : posts) {
-        double score = post["sentiment_score"].get<double>();
-        sentimentScores.push_back(score);
+
+    // Parse the JSON sentiment data
+    auto data = json::parse(sentimentData);
+    for (const auto& status : data["statuses"]) {
+        string text = status["text"];
+        double sentimentScore = 0.0;
+
+        // Simple sentiment analysis (mock)
+        if (text.find("Great") != string::npos || text.find("good") != string::npos) {
+            sentimentScore = 1.0;
+        } else if (text.find("Terrible") != string::npos || text.find("bad") != string::npos) {
+            sentimentScore = -1.0;
+        }
+
+        sentimentScores.push_back(sentimentScore);
     }
+
     return sentimentScores;
 }

@@ -6,8 +6,7 @@
 #include "trend_analyzer.h"
 #include "sentiment_analyzer.h"
 #include "risk_assessor.h"
-#include "visualizer.h"
-#include "twitter_data.h"
+#include "aylien_data.h"
 #include "httplib.h"
 #include "json.hpp"
 #include <vector>
@@ -59,21 +58,25 @@ int main() {
         string symbol = j["symbol"];
         bool applySentiment = j["applySentiment"];
         const char* alphaVantageApiKey = getenv("ALPHA_VANTAGE_API_KEY");
+        const char* aylienApiKey = getenv("AYLIEN_API_KEY");
+        const char* aylienAppId = getenv("AYLIEN_APP_ID");
 
         cout << "Analyzing symbol: " << symbol << endl;
 
         // Fetch and process financial data
         string marketData = fetchData(alphaVantageApiKey, symbol);
         auto processedMarketData = processData(marketData);
+        cout << "Processed market data." << endl;
 
         vector<double> sentimentScores;
 
-        // If applySentiment is true, fetch and process sentiment data
+        // If applySentiment is true, fetch and process sentiment data using AYLIEN
         if (applySentiment) {
-            cout << "Fetching sentiment data..." << endl;
-            const char* bearerToken = getenv("TWITTER_BEARER_TOKEN");
-            string sentimentData = fetchTwitterData(bearerToken, symbol);
-            sentimentScores = analyzeSentiment(sentimentData);
+            cout << "Fetching sentiment data using AYLIEN..." << endl;
+            string newsData = fetchAylienNewsData(aylienApiKey, aylienAppId, symbol);
+            cout << "Fetched news data." << endl;
+            sentimentScores = analyzeAylienSentiment(aylienApiKey, aylienAppId, newsData);
+            cout << "Analyzed sentiment data." << endl;
         } else {
             cout << "Skipping sentiment analysis..." << endl;
         }

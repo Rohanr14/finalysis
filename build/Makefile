@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rohan/VSCode/finalysis/build/CMakeFiles /Users/rohan/VSCode/finalysis/build//CMakeFiles/progress.marks
@@ -174,31 +129,29 @@ Finalysis/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/build
 .PHONY : Finalysis/fast
 
-#=============================================================================
-# Target rules for targets named nodesoup
+src/aylien_data.o: src/aylien_data.cpp.o
+.PHONY : src/aylien_data.o
 
-# Build rule for target.
-nodesoup: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nodesoup
-.PHONY : nodesoup
+# target to build an object file
+src/aylien_data.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o
+.PHONY : src/aylien_data.cpp.o
 
-# fast build rule for target.
-nodesoup/fast:
-	$(MAKE) $(MAKESILENT) -f include/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/build.make include/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/build
-.PHONY : nodesoup/fast
+src/aylien_data.i: src/aylien_data.cpp.i
+.PHONY : src/aylien_data.i
 
-#=============================================================================
-# Target rules for targets named matplot
+# target to preprocess a source file
+src/aylien_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/aylien_data.cpp.i
+.PHONY : src/aylien_data.cpp.i
 
-# Build rule for target.
-matplot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matplot
-.PHONY : matplot
+src/aylien_data.s: src/aylien_data.cpp.s
+.PHONY : src/aylien_data.s
 
-# fast build rule for target.
-matplot/fast:
-	$(MAKE) $(MAKESILENT) -f include/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/build.make include/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/build
-.PHONY : matplot/fast
+# target to generate assembly for a file
+src/aylien_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/aylien_data.cpp.s
+.PHONY : src/aylien_data.cpp.s
 
 src/base64.o: src/base64.cpp.o
 .PHONY : src/base64.o
@@ -392,54 +345,6 @@ src/trend_analyzer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.s
 .PHONY : src/trend_analyzer.cpp.s
 
-src/twitter_data.o: src/twitter_data.cpp.o
-.PHONY : src/twitter_data.o
-
-# target to build an object file
-src/twitter_data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o
-.PHONY : src/twitter_data.cpp.o
-
-src/twitter_data.i: src/twitter_data.cpp.i
-.PHONY : src/twitter_data.i
-
-# target to preprocess a source file
-src/twitter_data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/twitter_data.cpp.i
-.PHONY : src/twitter_data.cpp.i
-
-src/twitter_data.s: src/twitter_data.cpp.s
-.PHONY : src/twitter_data.s
-
-# target to generate assembly for a file
-src/twitter_data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/twitter_data.cpp.s
-.PHONY : src/twitter_data.cpp.s
-
-src/visualizer.o: src/visualizer.cpp.o
-.PHONY : src/visualizer.o
-
-# target to build an object file
-src/visualizer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/visualizer.cpp.o
-.PHONY : src/visualizer.cpp.o
-
-src/visualizer.i: src/visualizer.cpp.i
-.PHONY : src/visualizer.i
-
-# target to preprocess a source file
-src/visualizer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/visualizer.cpp.i
-.PHONY : src/visualizer.cpp.i
-
-src/visualizer.s: src/visualizer.cpp.s
-.PHONY : src/visualizer.s
-
-# target to generate assembly for a file
-src/visualizer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/visualizer.cpp.s
-.PHONY : src/visualizer.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -447,14 +352,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Finalysis"
-	@echo "... matplot"
-	@echo "... nodesoup"
+	@echo "... src/aylien_data.o"
+	@echo "... src/aylien_data.i"
+	@echo "... src/aylien_data.s"
 	@echo "... src/base64.o"
 	@echo "... src/base64.i"
 	@echo "... src/base64.s"
@@ -479,12 +381,6 @@ help:
 	@echo "... src/trend_analyzer.o"
 	@echo "... src/trend_analyzer.i"
 	@echo "... src/trend_analyzer.s"
-	@echo "... src/twitter_data.o"
-	@echo "... src/twitter_data.i"
-	@echo "... src/twitter_data.s"
-	@echo "... src/visualizer.o"
-	@echo "... src/visualizer.i"
-	@echo "... src/visualizer.s"
 .PHONY : help
 
 

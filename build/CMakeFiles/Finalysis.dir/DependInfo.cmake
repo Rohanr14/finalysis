@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/rohan/VSCode/finalysis/src/aylien_data.cpp" "CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/base64.cpp" "CMakeFiles/Finalysis.dir/src/base64.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/base64.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/common_utils.cpp" "CMakeFiles/Finalysis.dir/src/common_utils.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/common_utils.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/data_fetcher.cpp" "CMakeFiles/Finalysis.dir/src/data_fetcher.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/data_fetcher.cpp.o.d"
@@ -16,8 +17,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/rohan/VSCode/finalysis/src/risk_assessor.cpp" "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp" "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/trend_analyzer.cpp" "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o.d"
-  "/Users/rohan/VSCode/finalysis/src/twitter_data.cpp" "CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/twitter_data.cpp.o.d"
-  "/Users/rohan/VSCode/finalysis/src/visualizer.cpp" "CMakeFiles/Finalysis.dir/src/visualizer.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/visualizer.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

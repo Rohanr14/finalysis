@@ -24,10 +24,10 @@ document.getElementById('analyze-form').addEventListener('submit', function (eve
             const layout = {
                 title: 'Stock Price Over Time',
                 xaxis: {
-                    title: 'Time'
+                    title: 'Time (s)'
                 },
                 yaxis: {
-                    title: 'Stock Price'
+                    title: 'Stock Price (USD)'
                 }
             };
 
