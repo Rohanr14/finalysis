@@ -139,24 +139,10 @@ CMakeFiles/Finalysis.dir/src/data_processor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Finalysis.dir/src/data_processor.cpp.s"
 	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohan/VSCode/finalysis/src/data_processor.cpp -o CMakeFiles/Finalysis.dir/src/data_processor.cpp.s
 
-CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o: CMakeFiles/Finalysis.dir/flags.make
-CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o: /Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp
-CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o: CMakeFiles/Finalysis.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o -MF CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o.d -o CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o -c /Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp
-
-CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.i"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp > CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.i
-
-CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.s"
-	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp -o CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.s
-
 CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o: CMakeFiles/Finalysis.dir/flags.make
 CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o: /Users/rohan/VSCode/finalysis/src/trend_analyzer.cpp
 CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o: CMakeFiles/Finalysis.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o"
 	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o -MF CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o.d -o CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o -c /Users/rohan/VSCode/finalysis/src/trend_analyzer.cpp
 
 CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.i: cmake_force
@@ -170,7 +156,7 @@ CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.s: cmake_force
 CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o: CMakeFiles/Finalysis.dir/flags.make
 CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o: /Users/rohan/VSCode/finalysis/src/risk_assessor.cpp
 CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o: CMakeFiles/Finalysis.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o"
 	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o -MF CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o.d -o CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o -c /Users/rohan/VSCode/finalysis/src/risk_assessor.cpp
 
 CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.s: cmake_force
 CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o: CMakeFiles/Finalysis.dir/flags.make
 CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o: /Users/rohan/VSCode/finalysis/src/aylien_data.cpp
 CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o: CMakeFiles/Finalysis.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o"
 	/opt/homebrew/opt/llvm/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o -MF CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o.d -o CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o -c /Users/rohan/VSCode/finalysis/src/aylien_data.cpp
 
 CMakeFiles/Finalysis.dir/src/aylien_data.cpp.i: cmake_force
@@ -202,7 +188,6 @@ Finalysis_OBJECTS = \
 "CMakeFiles/Finalysis.dir/src/common_utils.cpp.o" \
 "CMakeFiles/Finalysis.dir/src/data_fetcher.cpp.o" \
 "CMakeFiles/Finalysis.dir/src/data_processor.cpp.o" \
-"CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o" \
 "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o" \
 "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o" \
 "CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o"
@@ -215,7 +200,6 @@ Finalysis: CMakeFiles/Finalysis.dir/src/base64.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/common_utils.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/data_fetcher.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/data_processor.cpp.o
-Finalysis: CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o
 Finalysis: CMakeFiles/Finalysis.dir/src/aylien_data.cpp.o
@@ -225,7 +209,7 @@ Finalysis: /opt/homebrew/lib/libdlib.19.24.4.dylib
 Finalysis: /opt/homebrew/opt/llvm/lib/libomp.dylib
 Finalysis: /opt/homebrew/opt/openblas/lib/libopenblas.dylib
 Finalysis: CMakeFiles/Finalysis.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Finalysis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Finalysis"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Finalysis.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

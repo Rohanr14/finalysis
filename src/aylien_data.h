@@ -6,7 +6,8 @@
 
 using namespace std;
 
-string fetchAylienNewsData(const string &apiKey, const string &appId, const string &symbol);
-vector<double> analyzeAylienSentiment(const string &apiKey, const string &appId, const string &newsData);
+string getBearerToken(const string &username, const string &password);
+string fetchAylienNewsData(const string &bearerToken, const string &symbol);
+vector<double> analyzeAylienSentiment(const string &bearerToken, const string &newsData);
 
-#endif // AYLIEN_DATA_H
+#endif //AYLIEN_DATA_H

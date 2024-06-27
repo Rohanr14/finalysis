@@ -24,7 +24,7 @@ document.getElementById('analyze-form').addEventListener('submit', function (eve
             const layout = {
                 title: 'Stock Price Over Time',
                 xaxis: {
-                    title: 'Time (s)'
+                    title: 'Time (min)'
                 },
                 yaxis: {
                     title: 'Stock Price (USD)'

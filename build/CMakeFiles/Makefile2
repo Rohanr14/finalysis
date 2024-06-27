@@ -81,12 +81,12 @@ clean: CMakeFiles/Finalysis.dir/clean
 CMakeFiles/Finalysis.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Finalysis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rohan/VSCode/finalysis/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target Finalysis"
 .PHONY : CMakeFiles/Finalysis.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Finalysis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rohan/VSCode/finalysis/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rohan/VSCode/finalysis/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Finalysis.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rohan/VSCode/finalysis/build/CMakeFiles 0
 .PHONY : CMakeFiles/Finalysis.dir/rule

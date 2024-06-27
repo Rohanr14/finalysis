@@ -13,8 +13,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Finalysis.dir/src/main.cpp.o.d"
   "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o"
   "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o.d"
-  "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o"
-  "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o.d"
   "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o"
   "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o.d"
   "Finalysis"

@@ -297,30 +297,6 @@ src/risk_assessor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.s
 .PHONY : src/risk_assessor.cpp.s
 
-src/sentiment_analyzer.o: src/sentiment_analyzer.cpp.o
-.PHONY : src/sentiment_analyzer.o
-
-# target to build an object file
-src/sentiment_analyzer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o
-.PHONY : src/sentiment_analyzer.cpp.o
-
-src/sentiment_analyzer.i: src/sentiment_analyzer.cpp.i
-.PHONY : src/sentiment_analyzer.i
-
-# target to preprocess a source file
-src/sentiment_analyzer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.i
-.PHONY : src/sentiment_analyzer.cpp.i
-
-src/sentiment_analyzer.s: src/sentiment_analyzer.cpp.s
-.PHONY : src/sentiment_analyzer.s
-
-# target to generate assembly for a file
-src/sentiment_analyzer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Finalysis.dir/build.make CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.s
-.PHONY : src/sentiment_analyzer.cpp.s
-
 src/trend_analyzer.o: src/trend_analyzer.cpp.o
 .PHONY : src/trend_analyzer.o
 
@@ -375,9 +351,6 @@ help:
 	@echo "... src/risk_assessor.o"
 	@echo "... src/risk_assessor.i"
 	@echo "... src/risk_assessor.s"
-	@echo "... src/sentiment_analyzer.o"
-	@echo "... src/sentiment_analyzer.i"
-	@echo "... src/sentiment_analyzer.s"
 	@echo "... src/trend_analyzer.o"
 	@echo "... src/trend_analyzer.i"
 	@echo "... src/trend_analyzer.s"

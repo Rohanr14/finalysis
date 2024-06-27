@@ -1,16 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <thread>
+#include <future>
+#include "httplib.h"
+#include "json.hpp"
 #include "data_fetcher.h"
 #include "data_processor.h"
 #include "trend_analyzer.h"
-#include "sentiment_analyzer.h"
 #include "risk_assessor.h"
 #include "aylien_data.h"
-#include "httplib.h"
-#include "json.hpp"
-#include <vector>
-#include <iterator>
 
 using json = nlohmann::json;
 using namespace httplib;
@@ -57,40 +56,52 @@ int main() {
         json j = json::parse(req.body);
         string symbol = j["symbol"];
         bool applySentiment = j["applySentiment"];
+        const char* username = getenv("AYLIEN_USERNAME");
+        const char* password = getenv("AYLIEN_PASSWORD");
+
         const char* alphaVantageApiKey = getenv("ALPHA_VANTAGE_API_KEY");
-        const char* aylienApiKey = getenv("AYLIEN_API_KEY");
-        const char* aylienAppId = getenv("AYLIEN_APP_ID");
+        if (!alphaVantageApiKey) {
+            res.status = 500;
+            res.set_content("ALPHA_VANTAGE_API_KEY environment variable is not set.", "text/plain");
+            return;
+        }
 
         cout << "Analyzing symbol: " << symbol << endl;
 
-        // Fetch and process financial data
-        string marketData = fetchData(alphaVantageApiKey, symbol);
-        auto processedMarketData = processData(marketData);
-        cout << "Processed market data." << endl;
+        try {
+            auto fetchMarketDataFuture = async(launch::async, [&]() {
+                return fetchData(alphaVantageApiKey, symbol);
+            });
 
-        vector<double> sentimentScores;
+            vector<double> sentimentScores;
+            if (applySentiment) {
+                cout << "Fetching sentiment data using AYLIEN..." << endl;
+                auto fetchSentimentDataFuture = async(launch::async, [&]() {
+                    string bearerToken = getBearerToken(username, password);
+                    string newsData = fetchAylienNewsData(bearerToken, symbol);
+                    return analyzeAylienSentiment(bearerToken, newsData);
+                });
+                sentimentScores = fetchSentimentDataFuture.get();
+            } else {
+                cout << "Skipping sentiment analysis..." << endl;
+            }
 
-        // If applySentiment is true, fetch and process sentiment data using AYLIEN
-        if (applySentiment) {
-            cout << "Fetching sentiment data using AYLIEN..." << endl;
-            string newsData = fetchAylienNewsData(aylienApiKey, aylienAppId, symbol);
-            cout << "Fetched news data." << endl;
-            sentimentScores = analyzeAylienSentiment(aylienApiKey, aylienAppId, newsData);
-            cout << "Analyzed sentiment data." << endl;
-        } else {
-            cout << "Skipping sentiment analysis..." << endl;
+            string marketData = fetchMarketDataFuture.get();
+            auto processedMarketData = processData(marketData);
+            cout << "Processed market data." << endl;
+
+            auto trends = analyzeTrends(processedMarketData);
+            auto risk = assessRisk(processedMarketData, sentimentScores);
+
+            json response;
+            response["risk"] = risk;
+            response["data"] = processedMarketData;
+
+            res.set_content(response.dump(), "application/json");
+        } catch (const exception &e) {
+            res.status = 500;
+            res.set_content("Error: " + string(e.what()), "text/plain");
         }
-
-        // Analyze trends and assess risk
-        auto trends = analyzeTrends(processedMarketData);
-        auto risk = assessRisk(processedMarketData, sentimentScores);
-
-        // Create response JSON
-        json response;
-        response["risk"] = risk;
-        response["data"] = processedMarketData;
-
-        res.set_content(response.dump(), "application/json");
     });
 
     cout << "Server listening on http://localhost:8080" << endl;

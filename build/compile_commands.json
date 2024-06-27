@@ -31,12 +31,6 @@
 },
 {
   "directory": "/Users/rohan/VSCode/finalysis/build",
-  "command": "/opt/homebrew/opt/llvm/bin/clang++  -I/Users/rohan/VSCode/finalysis/include -I/Users/rohan/VSCode/finalysis/include/json -I/Users/rohan/VSCode/finalysis/include/dlib -I/Users/rohan/VSCode/finalysis/include/cpprest -I/Users/rohan/VSCode/finalysis/include/cpp-httplib -isystem /opt/homebrew/include -g -g -O0 -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -Xpreprocessor -fopenmp -o CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o -c /Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp",
-  "file": "/Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp",
-  "output": "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o"
-},
-{
-  "directory": "/Users/rohan/VSCode/finalysis/build",
   "command": "/opt/homebrew/opt/llvm/bin/clang++  -I/Users/rohan/VSCode/finalysis/include -I/Users/rohan/VSCode/finalysis/include/json -I/Users/rohan/VSCode/finalysis/include/dlib -I/Users/rohan/VSCode/finalysis/include/cpprest -I/Users/rohan/VSCode/finalysis/include/cpp-httplib -isystem /opt/homebrew/include -g -g -O0 -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -Xpreprocessor -fopenmp -o CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o -c /Users/rohan/VSCode/finalysis/src/trend_analyzer.cpp",
   "file": "/Users/rohan/VSCode/finalysis/src/trend_analyzer.cpp",
   "output": "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o"

@@ -20,8 +20,6 @@ add_executable(Finalysis
     src/data_fetcher.h
     src/data_processor.cpp
     src/data_processor.h
-    src/sentiment_analyzer.cpp
-    src/sentiment_analyzer.h
     src/trend_analyzer.cpp
     src/trend_analyzer.h
     src/risk_assessor.cpp

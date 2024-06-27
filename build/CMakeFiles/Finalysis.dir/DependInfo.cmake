@@ -15,7 +15,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/rohan/VSCode/finalysis/src/data_processor.cpp" "CMakeFiles/Finalysis.dir/src/data_processor.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/data_processor.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/main.cpp" "CMakeFiles/Finalysis.dir/src/main.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/main.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/risk_assessor.cpp" "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/risk_assessor.cpp.o.d"
-  "/Users/rohan/VSCode/finalysis/src/sentiment_analyzer.cpp" "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/sentiment_analyzer.cpp.o.d"
   "/Users/rohan/VSCode/finalysis/src/trend_analyzer.cpp" "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o" "gcc" "CMakeFiles/Finalysis.dir/src/trend_analyzer.cpp.o.d"
   )
 
